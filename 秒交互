@@ -1,0 +1,7 @@
+-- 把地图全部ProximityPrompt全部改成无需长按，按E立刻触发
+for _,prompt in ipairs(game:GetDescendants()) do
+    if prompt:IsA("ProximityPrompt") then
+        prompt.HoldDuration = 0
+        prompt.MaxActivationDistance = 30 -- 最大交互距离30格，按需修改
+    end
+end
